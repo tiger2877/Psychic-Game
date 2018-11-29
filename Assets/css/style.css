@@ -84,6 +84,11 @@ h4 {
   background: #4aaaa5;
 }
 
+#game {
+ color: antiquewhite;
+}
+
+
 nav {
   float: right;
   margin-top: 25px;

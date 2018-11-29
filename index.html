@@ -12,11 +12,11 @@
     <!-- Custom styles for this template -->
     <link href="Assets/css/reset.css" rel="stylesheet">
     <link href="Assets/css/style.css" rel="stylesheet">
-   
+    
   </head>
 
   <body>
-
+   
     <header>
           <img class="image" src="Assets/images/crystallball.jpg" alt="the Psychic Game">
           <h1 style="text-align: center">The Psychic Game</h1>
@@ -24,12 +24,12 @@
 
 <!-- Content here -->
 <div class="wrapper">
-        <!-- Main Body goes in Container -->
+<!-- Main Body goes in Container -->
 <div id="main-container" class="container">
     
-          <!-- Main Body goes in Main Section -->
+<!-- Main Body goes in Main Section -->
 <section class="main-section">
-              <p>Can you guess what letter I am thinking of?</p> <br>
+              <p>Can you guess what letter I am thinking of?</p>
               <p>Press any letter key a-z to begin.</p>
               <div id="game">
                     <p>Guess what letter I'm thinking of!</p>
@@ -40,52 +40,7 @@
               </div>
           
 
-      <script type="text/javascript">
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 9;
-        var guessesSoFar = []; // array to push user choices to
-        var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; //list of letters to choose from
-        document.onkeyup = function(event) {
-            var userGuess = event.key.toLocaleLowerCase();
-            //var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess
-            var computerGuess = computerChoices[Math.floor(Math.random()*computerChoices.length)]; //computer selects random letter
-            guessesSoFar.push(userGuess); //pushing user guess to guesses so far
-            if (userGuess == computerGuess) {
-                wins++;
-                alert('Way to go! You\'ve guesesed corrrectly. You Won!');
-                guessesLeft = 9; //reseting the guesses back to 9 so that the user can play again
-                guessesSoFar.length = 0; //this removes everything from the guesses so far array, so that the guesses from the previous round don't show
-            }
-            else if (guessesLeft == 0){
-                losses++;
-                alert('You didn\'t guess the correct letter. You lost. Let\'s try again.');
-                guessesLeft = 9;
-                guessesSoFar.length = 0;
-            }
-            else if (userGuess !== computerGuess){
-                guessesLeft--; //decrementing the guesses left
-            }  
-            // Taking the tallies and displaying them in HTML    
-            var html =  
-            "<p>Guess what letter I'm thinking of!</p>" +
-            "<p>Total Wins: " + 
-            wins + 
-            "</p>" +
-            "<p>Total Losses: " + 
-            losses + 
-            "</p>" +
-            "<p>Guesses Left: " + 
-            guessesLeft + 
-            "</p>" +
-            "<p>Your Guesses so far: " +
-            guessesSoFar +
-            "</p>"
-            ;
-            // Placing the html into the game ID
-            document.querySelector('#game').innerHTML = html;
-        }
-    </script>
+
 </div>
 <div class="row">
     <div class="col-md-12">
@@ -98,6 +53,6 @@
     </div>
 </div>
 </section>
-
+<script src="Assets/javascript/game.js"></script>
   </body>
 </html>
