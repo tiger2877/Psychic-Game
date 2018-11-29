@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Psychic Game</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Linking CSS -->
 
     <!-- Custom styles for this template -->
     <link href="Assets/css/reset.css" rel="stylesheet">
@@ -18,30 +18,41 @@
   <body>
    
     <header>
+        
           <img class="image" src="Assets/images/crystallball.jpg" alt="the Psychic Game">
           <h1 style="text-align: center">The Psychic Game</h1>
+  
     </header>
 
 <!-- Content here -->
 <div class="wrapper">
-<!-- Main Body goes in Container -->
-<div id="main-container" class="container">
+
+    <!-- Main Body goes in Container -->
+    <div id="main-container" class="container">
     
-<!-- Main Body goes in Main Section -->
-<section class="main-section">
+      <!-- Main Body goes in Main Section -->
+      <section class="main-section">
               <p>Can you guess what letter I am thinking of?</p>
               <p>Press any letter key a-z to begin.</p>
-              <div id="game">
-                    <p>Guess what letter I'm thinking of!</p>
-                    <p>Total Wins: </p>
-                    <p>Total Losses: </p>
-                    <p>Guesses Left: </p>
-                    <p>Your Guesses so far: </p>
+              <div class="row">
+                  <div class="col-md-12">
+                      
+                      <div id="game">
+                          <p>Guess what letter I'm thinking of!</p>
+                         
+                          <div style="color:aqua" class="col-md-12">
+                              <p>Total Wins: <span id="wins"><strong>0</strong></span></p>
+                              <p>Total Losses: <span id="losses"><strong>0</strong></span></p>
+                              <p>Guesses Left: <span id="guessesLeft"><strong>0</strong></span></p>
+                              <p>Your Guesses so far: <span id="guesses"><strong>0</strong></span></p>
+                          </div>
+                      </div>
+                  </div>
               </div>
-          
-
-
+      </section>
+  </div>
 </div>
+
 <div class="row">
     <div class="col-md-12">
           <!-- Sticky Footer -->
@@ -52,7 +63,8 @@
         </div>
     </div>
 </div>
-</section>
-<script src="Assets/javascript/game.js"></script>
-  </body>
+
+<script type="text/javascript" src="Assets/javascript/game.js"></script>
+
+</body>
 </html>
