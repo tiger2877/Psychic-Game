@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychic Game</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="Assets/css/reset.css" rel="stylesheet">
+    <link href="Assets/css/style.css" rel="stylesheet">
+   
+  </head>
+
+  <body>
+
+    <header>
+          <h1 style="text-align: center">The Psychic Game</h1>
+    </header>
+
+<!-- Content here -->
+<div class="wrapper">
+        <!-- Main Body goes in Container -->
+    <div id="main-container" class="container">
+       <img style="text-align: center" class="image" src="Assets/images/crystallball.jpg" alt="the Psychic Game">
+          <!-- Main Body goes in Main Section -->
+          <section class="main-section">
+              <p>Can you guess what letter I am thinking of?</p> <br>
+              <p>Press any letter key a-z to begin.</p>
+              <div id="game">
+                    <h1>The Psychic Game</h1>
+                    <p>Guess what letter I'm thinking of!</p>
+                    <p>Total Wins: </p>
+                    <p>Total Losses: </p>
+                    <p>Guesses Left: </p>
+                    <p>Your Guesses so far: </p>
+              </div>
+          </section>
+
+      <script type="text/javascript">
+        var wins = 0;
+        var losses = 0;
+        var guessesLeft = 9;
+        var guessesSoFar = []; // array to push user choices to
+        var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; //list of letters to choose from
+        document.onkeyup = function(event) {
+            var userGuess = event.key.toLocaleLowerCase();
+            //var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); //taking in user guess
+            var computerGuess = computerChoices[Math.floor(Math.random()*computerChoices.length)]; //computer selects random letter
+            guessesSoFar.push(userGuess); //pushing user guess to guesses so far
+            if (userGuess == computerGuess) {
+                wins++;
+                alert('Way to go! You\'ve guesesed corrrectly. You Won!');
+                guessesLeft = 9; //reseting the guesses back to 9 so that the user can play again
+                guessesSoFar.length = 0; //this removes everything from the guesses so far array, so that the guesses from the previous round don't show
+            }
+            else if (guessesLeft == 0){
+                losses++;
+                alert('You didn\'t guess the correct letter. You lost. Let\'s try again.');
+                guessesLeft = 9;
+                guessesSoFar.length = 0;
+            }
+            else if (userGuess !== computerGuess){
+                guessesLeft--; //decrementing the guesses left
+            }  
+            // Taking the tallies and displaying them in HTML    
+            var html = "<h1>The Psychic Game</h1>" + 
+            "<p>Guess what letter I'm thinking of!</p>" +
+            "<p>Total Wins: " + 
+            wins + 
+            "</p>" +
+            "<p>Total Losses: " + 
+            losses + 
+            "</p>" +
+            "<p>Guesses Left: " + 
+            guessesLeft + 
+            "</p>" +
+            "<p>Your Guesses so far: " +
+            guessesSoFar +
+            "</p>"
+            ;
+            // Placing the html into the game ID
+            document.querySelector('#game').innerHTML = html;
+        }
+    </script>
+      <footer>
+        <div class="container">
+        © 2018 Pryambudhi Cahyadi
+        </div>
+      </footer>
+
+  </body>
+</html>
