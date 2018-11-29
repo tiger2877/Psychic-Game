@@ -20,11 +20,16 @@ body {
   color: wheat;
 }
 
+.jumbotron {
+	background-color: #428bca
+}
+
 h1,
 h2,
 h3,
 p {
   margin-bottom: 20px;
+  color: antiquewhite;
 }
 
 p:last-child {
