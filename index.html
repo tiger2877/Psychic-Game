@@ -18,27 +18,27 @@
   <body>
 
     <header>
+          <img class="image" src="Assets/images/crystallball.jpg" alt="the Psychic Game">
           <h1 style="text-align: center">The Psychic Game</h1>
     </header>
 
 <!-- Content here -->
 <div class="wrapper">
         <!-- Main Body goes in Container -->
-    <div id="main-container" class="container">
-       <img style="text-align: center" class="image" src="Assets/images/crystallball.jpg" alt="the Psychic Game">
+<div id="main-container" class="container">
+    
           <!-- Main Body goes in Main Section -->
-          <section class="main-section">
+<section class="main-section">
               <p>Can you guess what letter I am thinking of?</p> <br>
               <p>Press any letter key a-z to begin.</p>
               <div id="game">
-                    <h1>The Psychic Game</h1>
                     <p>Guess what letter I'm thinking of!</p>
                     <p>Total Wins: </p>
                     <p>Total Losses: </p>
                     <p>Guesses Left: </p>
                     <p>Your Guesses so far: </p>
               </div>
-          </section>
+          
 
       <script type="text/javascript">
         var wins = 0;
@@ -67,7 +67,7 @@
                 guessesLeft--; //decrementing the guesses left
             }  
             // Taking the tallies and displaying them in HTML    
-            var html = "<h1>The Psychic Game</h1>" + 
+            var html =  
             "<p>Guess what letter I'm thinking of!</p>" +
             "<p>Total Wins: " + 
             wins + 
@@ -86,11 +86,18 @@
             document.querySelector('#game').innerHTML = html;
         }
     </script>
-      <footer>
-        <div class="container">
-        © 2018 Pryambudhi Cahyadi
+</div>
+<div class="row">
+    <div class="col-md-12">
+          <!-- Sticky Footer -->
+        <div class= "card-footer">
+                <footer>
+                © 2018 Pryambudhi Cahyadi &copy; 
+                </footer>
         </div>
-      </footer>
+    </div>
+</div>
+</section>
 
   </body>
 </html>

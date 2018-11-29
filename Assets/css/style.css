@@ -17,6 +17,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
   clear: both;
+  color: wheat;
 }
 
 h1,
@@ -53,7 +54,7 @@ h3 {
 h4 {
   font-size: 18px;
   text-align: center;
-  color: black;
+  color:whitesmoke;
   }
 
 /* header */
@@ -129,10 +130,8 @@ footer {
   clear: both;
   font-size: 12px;
   color: #ffffff;
-  color: #cccccc;
   text-align: center;
-  background: #666666;
-  border-top: 8px solid #4aaaa5;
+  background:black;
   height: 50px;
 }
 
@@ -160,7 +159,7 @@ h3, h2 {
 /* main */
 
 #main-container {
-  padding-top: 130px;
+  padding-top: 50px;
   min-height: calc(100vh - 70px);
 }
 
@@ -170,7 +169,7 @@ h3, h2 {
   max-width: 960px;
   padding: 30px;
   margin: 0 0 40px;
-  background: #ffffff;
+  background: black;
   border: 1px solid #dddddd;
 }
 
@@ -195,11 +194,12 @@ h3, h2 {
 }
 
 .image {
-  float: left;
-  width: 300px;
-  height: auto;
+  height: 200px;
   margin-top: 10px;
-  margin-right: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 img:hover {
