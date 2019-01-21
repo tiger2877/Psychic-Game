@@ -43,7 +43,7 @@ In this assignment, you'll create one of two possible computer games: Word Guess
 
 ## Option One: Psychic Game (Basic)
 
-![Psychic](Images/1-Psychic.jpg)
+![Psychic](1-Psychic.jpg)
 
 1. [Watch the demo](https://youtu.be/qTc45Lox97g).
 
